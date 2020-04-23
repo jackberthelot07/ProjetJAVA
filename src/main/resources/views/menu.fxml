@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="640.0"
+            prefWidth="1200.0"
+            xmlns="http://javafx.com/javafx/10.0.2-internal"
+            xmlns:fx="http://javafx.com/fxml/1"
+            stylesheets="@css/menu.css"
+            fx:controller="org.ensak.back_office.controllers.MenuController">
+    <left>
+        <VBox prefWidth="300"
+              spacing="30"
+              style="-fx-background-color:#073763">
+            <padding>
+                <Insets left="20" right="20" top="20" />
+            </padding>
+
+            <children>
+                <!-- Image d'en-tête -->
+                <VBox alignment="TOP_CENTER">
+                    <ImageView>
+                        <image>
+                            <Image requestedHeight="100" requestedWidth="100" url="@/images/adminLogo.png" />
+                        </image>
+                    </ImageView>
+                </VBox>
+
+                <VBox spacing="40">
+
+                    <!-- Bouton pour l'accueil-->
+                    <Button onAction="#accueil" fx:id="accueil" alignment="BASELINE_LEFT" prefWidth="260"  style="-fx-background-color:#073763" text="Acceuil" textFill="white">
+                        <font>
+                            <Font name="Bell MT bold" size="20" />
+                        </font>
+                        <graphic>
+                            <ImageView fx:id="Laccueil">
+                                <image>
+                                    <Image requestedHeight="20" requestedWidth="20" url="@/images/home.png" />
+                                </image>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+
+                    <!-- Bouton pour les divisions-->
+                    <Button onAction="#division" fx:id="division" alignment="BASELINE_LEFT" prefWidth="260" style="-fx-background-color:#073763" text="Gestion des divisions" textFill="white">
+                        <font>
+                            <Font name="Bell MT bold" size="20" />
+                        </font>
+                        <graphic>
+                            <ImageView fx:id="Ldivision">
+                                <Image requestedHeight="20" requestedWidth="20" url="@/images/divisions.png"/>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+
+                    <!-- Bouton pour les employés-->
+                    <Button onAction="#employe" fx:id="employe" alignment="BASELINE_LEFT" prefWidth="260" style="-fx-background-color:#073763" text="Gestion des employés" textFill="white">
+                        <font>
+                            <Font name="Bell MT bold" size="20" />
+                        </font>
+                        <graphic>
+                            <ImageView fx:id="Lemploye">
+                                <image>
+                                    <Image requestedHeight="20" requestedWidth="20" url="@/images/employes.png" />
+                                </image>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+
+                    <!-- Bouton pour les procédures-->
+                    <Button onAction="#procedure" fx:id="procedure" alignment="BASELINE_LEFT" prefWidth="260" style="-fx-background-color:#073763" text="Gestion des procédures" textFill="white">
+                        <font>
+                            <Font name="Bell MT bold" size="20" />
+                        </font>
+                        <graphic>
+                            <ImageView fx:id="Lprocedure">
+                                <image>
+                                    <Image requestedHeight="20" requestedWidth="20" url="@/images/procedures.png" />
+                                </image>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </VBox>
+            </children>
+        </VBox>
+    </left>
+
+    <center>
+        <BorderPane BorderPane.alignment="CENTER"
+                    style="-fx-background-color:#DDD">
+            <center>
+                <AnchorPane prefHeight="640"/>
+            </center>
+        </BorderPane>
+    </center>
+
+</BorderPane>
+
